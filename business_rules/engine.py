@@ -15,10 +15,15 @@ def run_all(rule_list,
     return rule_was_triggered
 
 def run(rule, defined_variables, defined_actions):
-    conditions, actions = rule['conditions'], rule['actions']
+    conditions = rule['conditions']
+    actionExists = False
+    if 'actions' in rule:
+        actions = rule['actions']
+        actionExists = True
     rule_triggered = check_conditions_recursively(conditions, defined_variables)
     if rule_triggered:
-        do_actions(actions, defined_actions)
+        if actionExists:
+            do_actions(actions, defined_actions)
         return True
     return False
 

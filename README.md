@@ -283,6 +283,8 @@ Open up a pull request, making sure to add tests for any new functionality. To s
 $ python -m virtualenv venv
 $ source ./venv/bin/activate
 $ pip install -r dev-requirements.txt -e .
+$ pip install fastapi
+$ pip install uvicorn
 $ pytest
 ```
 
