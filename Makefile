@@ -11,3 +11,6 @@ init_dep:
 
 start_sample_app:
 	uvicorn samples.main:app --reload
+
+start_life_app:
+	uvicorn life_insurance.main:app --reload

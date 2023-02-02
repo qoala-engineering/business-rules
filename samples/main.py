@@ -3,7 +3,7 @@ from samples.product_variables import ProductVariables
 from samples.product_actions import ProductActions
 from samples.product import Product
 from business_rules import run
-from samples.response import SuccessResponse
+from utils.response import SuccessResponse
 from samples.request import *
 
 
