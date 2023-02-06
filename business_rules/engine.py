@@ -99,15 +99,13 @@ class Engine(_BaseEngine):
         return {"validation_result": res }
 
     def validate_bulk(self, rule_map, variable):
-        res = []
         valid_identifiers = []
         print(rule_map.keys())
         for ruleData in rule_map.keys():
             resData = self._BaseEngine__run(rule_map[ruleData], variable)
-            res.append(resData)
             if resData:
                 valid_identifiers.append(ruleData)
-        return {"validation_results": res, "valid_identifiers": valid_identifiers }
+        return { "valid_identifiers": valid_identifiers }
 
     def get_variables(self, variable):
-        return variable.get_all_variables()
+        return {"filters": variable.get_all_variables()}
