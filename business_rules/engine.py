@@ -108,3 +108,6 @@ class Engine(_BaseEngine):
             if resData:
                 valid_identifiers.append(ruleData)
         return {"validation_results": res, "valid_identifiers": valid_identifiers }
+
+    def get_variables(self, variable):
+        return variable.get_all_variables()

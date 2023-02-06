@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from life_insurance.plan_validation_variables import PlanValidationVariables
 from life_insurance.plan_validation import PlanValidation, PlanValidationData
 from business_rules.engine import Engine
-from utils.response import SuccessResponse
+from utils.response import SuccessResponse, FailedResponse
 from life_insurance.request import *
 
 app = FastAPI()
@@ -40,3 +40,12 @@ def validate(request: ValidateRuleRequest):
     engine = Engine(PlanValidationVariables(planValidation))
     res = engine.validate(request.rule, PlanValidationVariables(planValidation))
     return SuccessResponse(message="validation success", data = res, meta=None)
+
+@app.get("/api/variables/{variable_id}")
+def validate(variable_id: str):
+    engine = Engine()
+    if variable_id == 'PLAN_VALIDATION':
+        res = engine.get_variables(PlanValidationVariables)
+    else:
+        return FailedResponse(message="get variables failed", data = None, meta=None, code=404)
+    return SuccessResponse(message="get variables success", data = res, meta=None)
