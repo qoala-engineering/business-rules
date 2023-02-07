@@ -1,7 +1,7 @@
 from business_rules.variables import BaseVariables
 from business_rules.variables import numeric_rule_variable
 from business_rules.variables import boolean_rule_variable
-from business_rules.variables import string_rule_variable
+from business_rules.variables import select_multiple_rule_variable
 
 class PlanValidationVariables(BaseVariables):
     def __init__(self, plan_validation):
@@ -35,9 +35,16 @@ class PlanValidationVariables(BaseVariables):
     def sum_assured(self):
         return self.plan_validation.sum_assured
 
-    @string_rule_variable
+    paymentFrequencyOptions = {
+        "Single":"Single",
+        "Annual":"Annual",
+        "Semi-Annual":"Semi-Annual",
+        "Quarterly":"Quarterly",
+        "Monthly":"Monthly",
+    }
+    @select_multiple_rule_variable(options=paymentFrequencyOptions)
     def premium_payment_frequency(self):
-        return self.plan_validation.premium_payment_frequency
+        return [self.plan_validation.premium_payment_frequency]
 
     @numeric_rule_variable
     def coverage_period(self):

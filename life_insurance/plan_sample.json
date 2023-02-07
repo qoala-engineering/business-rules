@@ -1,0 +1,428 @@
+{
+    "BAJAJ_ALLIANZ":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 60
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 12
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "smoking_status",
+                    "operator": "is_false",
+                    "value": null
+                },
+                {
+                    "name": "sum_assured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 500000000
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                }
+            ]
+        }
+    },
+    "TATA_AIA":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 120
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 984
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 12
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 984
+                },
+                {
+                    "name": "smoking_status",
+                    "operator": "is_false",
+                    "value": null
+                },
+                {
+                    "name": "sum_assured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 500000000
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                }
+            ]
+        }
+    },
+    "MAX_LIFE_INSURANCE":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 120
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 12
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "smoking_status",
+                    "operator": "is_false",
+                    "value": null
+                },
+                {
+                    "or": [
+                        {
+                            "and": [
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "greater_than_or_equal_to",
+                                    "value": 18
+                                },
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 45
+                                },
+                                {
+                                    "name": "sum_assured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 100000000
+                                }
+                            ]
+                        },
+                        {
+                            "and": [
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "greater_than_or_equal_to",
+                                    "value": 46
+                                },
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 55
+                                },
+                                {
+                                    "name": "sum_assured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 50000000
+                                }
+                            ]
+                        },
+                        {
+                            "and": [
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "greater_than_or_equal_to",
+                                    "value": 56
+                                },
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 60
+                                },
+                                {
+                                    "name": "sum_assured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 25000000
+                                }
+                            ]
+                        },
+                        {
+                            "and": [
+                                {
+                                    "name": "entry_age_insured",
+                                    "operator": "greater_than_or_equal_to",
+                                    "value": 61
+                                },
+                                {
+                                    "name": "sum_assured",
+                                    "operator": "less_than_or_equal_to",
+                                    "value": 100000000
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                }
+            ]
+        }
+    },
+    "ICICI_PRUDENTIAL":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 60
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 12
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "smoking_status",
+                    "operator": "is_false",
+                    "value": null
+                },
+                {
+                    "name": "sum_assured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 500000
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                }
+            ]
+        }
+    },
+    "HDFC_LIFE":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 18
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 65
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 1
+                },
+                {
+                    "name": "policy_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 12
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 804
+                },
+                {
+                    "name": "smoking_status",
+                    "operator": "is_false",
+                    "value": null
+                },
+                {
+                    "name": "annual_premium",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 500000000
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                }
+            ]
+        }
+    },
+    "AXA_LIFE":{
+        "conditions": {
+            "all": [
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 17
+                },
+                {
+                    "name": "entry_age_policy_holder",
+                    "operator": "less_than_or_equal_to",
+                    "value": 70
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 15
+                },
+                {
+                    "name": "entry_age_insured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 54
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 96
+                },
+                {
+                    "name": "premium_payment_term",
+                    "operator": "less_than_or_equal_to",
+                    "value": 120
+                },
+                {
+                    "name": "sum_assured",
+                    "operator": "greater_than_or_equal_to",
+                    "value": 30000000
+                },
+                {
+                    "name": "sum_assured",
+                    "operator": "less_than_or_equal_to",
+                    "value": 300000000
+                },
+                {
+                    "name": "premium_payment_frequency",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Annual","Monthly"]
+                }
+            ]
+        }
+    }
+}
