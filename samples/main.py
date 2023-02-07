@@ -9,16 +9,16 @@ from samples.request import *
 app = FastAPI()
 @app.post("/api/rule/validate-bulk")
 def BulkValidateRuleRequest(request: BulkValidateRuleRequest):
-    productData = request.data
-    product = Product(productData.name, productData.inventory, productData.price)
+    product_data = request.data
+    product = Product(product_data.name, product_data.inventory, product_data.price)
     engine = Engine()
     res = engine.validate(request.rules, ProductVariables(product))
     return SuccessResponse(message="bulk validation success", data = res, meta=None)
 
 @app.post("/api/rule/validate")
 def validate(request: ValidateRuleRequest):
-    productData = request.data
-    product = Product(productData.name, productData.inventory, productData.price)
+    product_data = request.data
+    product = Product(product_data.name, product_data.inventory, product_data.price)
     engine = Engine()
     res = engine.validate(request.rules, ProductVariables(product))
     return SuccessResponse(message="validation success", data = res, meta=None)

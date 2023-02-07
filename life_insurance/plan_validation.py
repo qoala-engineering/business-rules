@@ -1,27 +1,22 @@
-class PlanValidationData:
-    def __init__(self, smoker, policyTerm, age, paymentTerm, maturityAge, insuredAge, policyHolderAge):
-        self.smoker = smoker
-        self.policyTerm = policyTerm
-        self.age = age
-        self.paymentTerm = paymentTerm
-        self.maturityAge = maturityAge
-        self.insuredAge = insuredAge
-        self.policyHolderAge = policyHolderAge
-
 class PlanValidation:
-    smoker: bool
-    policyTerm: int
-    age: int
-    paymentTerm: str
-    maturityAge: int
-    insuredAge: int
-    policyHolderAge: int
-    def __init__(self, identifier, data):
-        self.identifier = identifier
-        self.smoker = data.smoker
-        self.policyTerm = data.policyTerm
-        self.age = data.age
-        self.paymentTerm = data.paymentTerm
-        self.maturityAge = data.maturityAge
-        self.insuredAge = data.insuredAge
-        self.policyHolderAge = data.policyHolderAge
+    smoking_status: bool
+    entry_age_policy_holder: int
+    entry_age_insured: int
+    policy_term: int
+    premium_payment_term: int
+    annual_premium: int
+    sum_assured: int
+    premium_payment_frequency: str
+    coverage_period: int
+    maximum_age_coverage: int
+    def __init__(self, **kwargs):
+        self.smoking_status = kwargs["smoking_status"]
+        self.entry_age_policy_holder = kwargs["entry_age_policy_holder"]
+        self.entry_age_insured = kwargs["entry_age_insured"]
+        self.policy_term = kwargs["policy_term"]
+        self.premium_payment_term = kwargs["premium_payment_term"]
+        self.annual_premium = kwargs["annual_premium"]
+        self.sum_assured = kwargs["sum_assured"]
+        self.premium_payment_frequency = kwargs["premium_payment_frequency"]
+        self.coverage_period = kwargs["coverage_period"]
+        self.maximum_age_coverage = kwargs["maximum_age_coverage"]

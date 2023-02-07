@@ -4,33 +4,45 @@ from business_rules.variables import boolean_rule_variable
 from business_rules.variables import string_rule_variable
 
 class PlanValidationVariables(BaseVariables):
-    def __init__(self, planValidation):
-        self.planValidation = planValidation
+    def __init__(self, plan_validation):
+        self.plan_validation = plan_validation
 
     @boolean_rule_variable
-    def smoker(self):
-        return self.planValidation.smoker
+    def smoking_status(self):
+        return self.plan_validation.smoking_status
 
     @numeric_rule_variable
-    def policyTerm(self):
-        return self.planValidation.policyTerm
+    def entry_age_policy_holder(self):
+        return self.plan_validation.entry_age_policy_holder
     
     @numeric_rule_variable
-    def age(self):
-        return self.planValidation.age
+    def entry_age_insured(self):
+        return self.plan_validation.entry_age_insured
+
+    @numeric_rule_variable
+    def policy_term(self):
+        return self.plan_validation.policy_term
+
+    @numeric_rule_variable
+    def premium_payment_term(self):
+        return self.plan_validation.premium_payment_term
+
+    @numeric_rule_variable
+    def annual_premium(self):
+        return self.plan_validation.annual_premium
+
+    @numeric_rule_variable
+    def sum_assured(self):
+        return self.plan_validation.sum_assured
 
     @string_rule_variable
-    def paymentTerm(self):
-        return self.planValidation.paymentTerm
+    def premium_payment_frequency(self):
+        return self.plan_validation.premium_payment_frequency
 
     @numeric_rule_variable
-    def maturityAge(self):
-        return self.planValidation.maturityAge
+    def coverage_period(self):
+        return self.plan_validation.coverage_period
 
     @numeric_rule_variable
-    def insuredAge(self):
-        return self.planValidation.insuredAge
-
-    @numeric_rule_variable
-    def policyHolderAge(self):
-        return self.planValidation.policyHolderAge
+    def maximum_age_coverage(self):
+        return self.plan_validation.maximum_age_coverage

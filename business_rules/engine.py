@@ -100,7 +100,6 @@ class Engine(_BaseEngine):
 
     def validate_bulk(self, rule_map, variable):
         valid_identifiers = []
-        print(rule_map.keys())
         for ruleData in rule_map.keys():
             resData = self._BaseEngine__run(rule_map[ruleData], variable)
             if resData:
