@@ -9,6 +9,7 @@ class PlanValidation:
     premium_payment_frequency: str
     coverage_period: int
     maximum_age_coverage: int
+    gender: str
     def __init__(self, **kwargs):
         self.smoking_status = kwargs["smoking_status"]
         self.entry_age_policy_holder = kwargs["entry_age_policy_holder"]
@@ -20,3 +21,4 @@ class PlanValidation:
         self.premium_payment_frequency = kwargs["premium_payment_frequency"]
         self.coverage_period = kwargs["coverage_period"]
         self.maximum_age_coverage = kwargs["maximum_age_coverage"]
+        self.gender = kwargs["gender"]

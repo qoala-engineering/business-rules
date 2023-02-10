@@ -170,9 +170,9 @@
                     "value": null
                 },
                 {
-                    "or": [
+                    "any": [
                         {
-                            "and": [
+                            "all": [
                                 {
                                     "name": "entry_age_insured",
                                     "operator": "greater_than_or_equal_to",
@@ -191,7 +191,7 @@
                             ]
                         },
                         {
-                            "and": [
+                            "all": [
                                 {
                                     "name": "entry_age_insured",
                                     "operator": "greater_than_or_equal_to",
@@ -210,7 +210,7 @@
                             ]
                         },
                         {
-                            "and": [
+                            "all": [
                                 {
                                     "name": "entry_age_insured",
                                     "operator": "greater_than_or_equal_to",
@@ -229,7 +229,7 @@
                             ]
                         },
                         {
-                            "and": [
+                            "all": [
                                 {
                                     "name": "entry_age_insured",
                                     "operator": "greater_than_or_equal_to",
@@ -370,6 +370,11 @@
                     "name": "premium_payment_frequency",
                     "operator": "shares_at_least_one_element_with",
                     "value": ["Single", "Annual", "Semi-Annual", "Quarterly", "Monthly"]
+                },
+                {
+                    "name": "gender",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Male"]
                 }
             ]
         }
@@ -421,6 +426,11 @@
                     "name": "premium_payment_frequency",
                     "operator": "shares_at_least_one_element_with",
                     "value": ["Annual","Monthly"]
+                },
+                {
+                    "name": "gender",
+                    "operator": "shares_at_least_one_element_with",
+                    "value": ["Female"]
                 }
             ]
         }

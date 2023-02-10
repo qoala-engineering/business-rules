@@ -12,7 +12,7 @@ class PlanValidationData(BaseModel):
     premium_payment_frequency: Optional[str]
     coverage_period: Optional[int]
     maximum_age_coverage: Optional[int]
-
+    gender: Optional[str]
 
 class BulkValidateRuleRequest(BaseModel):
     data: PlanValidationData

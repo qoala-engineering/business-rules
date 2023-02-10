@@ -123,7 +123,8 @@ curl --location --request POST 'localhost:8000/api/rule/validate' \
         "sum_assured": 50000000,
         "premium_payment_frequency": "Annual",
         "coverage_period": 30,
-        "maximum_age_coverage": 30
+        "maximum_age_coverage": 30,
+        "gender": "Male"
     }
 }'
 ```
@@ -617,7 +618,8 @@ curl --location --request POST 'localhost:8000/api/rule/validate-bulk' \
         "sum_assured": 50000000,
         "premium_payment_frequency": "Annual",
         "coverage_period": 30,
-        "maximum_age_coverage": 30
+        "maximum_age_coverage": 30,
+        "gender": "Male"
     }
 }'
 ```

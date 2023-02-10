@@ -53,3 +53,11 @@ class PlanValidationVariables(BaseVariables):
     @numeric_rule_variable
     def maximum_age_coverage(self):
         return self.plan_validation.maximum_age_coverage
+
+    genderOptions = {
+        "Male":"Male",
+        "Female":"Female",
+    }   
+    @select_multiple_rule_variable(options=genderOptions)
+    def gender(self):
+        return [self.plan_validation.gender]

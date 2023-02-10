@@ -21,6 +21,7 @@ def BulkValidateRuleRequest(request: BulkValidateRuleRequest):
         premium_payment_frequency = data.premium_payment_frequency,
         coverage_period = data.coverage_period,
         maximum_age_coverage = data.maximum_age_coverage,
+        gender = data.gender,
     )
     engine = Engine()
     res = engine.validate_bulk(rule_map, PlanValidationVariables(plan_validation_data))
@@ -40,6 +41,7 @@ def validate(request: ValidateRuleRequest):
         premium_payment_frequency = data.premium_payment_frequency,
         coverage_period = data.coverage_period,
         maximum_age_coverage = data.maximum_age_coverage,
+        gender = data.gender,
     )
     engine = Engine()
     res = engine.validate(request.rule, PlanValidationVariables(plan_validation_data))
