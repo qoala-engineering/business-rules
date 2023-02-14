@@ -9,8 +9,5 @@ init_dep:
 	pip install fastapi
 	pip install uvicorn
 
-start_sample_app:
-	uvicorn samples.main:app --reload
-
-start_life_app:
-	uvicorn life_insurance.main:app --reload
+start_app:
+	uvicorn main:app --reload
