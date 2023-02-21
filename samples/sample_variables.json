@@ -1,0 +1,97 @@
+{
+    "filters":[
+       {
+          "name":"annual_premium",
+          "label":"Annual Premium",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"coverage_period",
+          "label":"Coverage Period",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"entry_age_insured",
+          "label":"Entry Age Insured",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"entry_age_policy_holder",
+          "label":"Entry Age Policy Holder",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"gender",
+          "label":"Gender",
+          "field_type":"select_multiple",
+          "options":{
+             "Male":"Male",
+             "Female":"Female"
+          }
+       },
+       {
+          "name":"maximum_age_coverage",
+          "label":"Maximum Age Coverage",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"policy_term",
+          "label":"Policy Term",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"premium_payment_frequency",
+          "label":"Premium Payment Frequency",
+          "field_type":"select_multiple",
+          "options":{
+             "Single":"Single",
+             "Annual":"Annual",
+             "Semi-Annual":"Semi-Annual",
+             "Quarterly":"Quarterly",
+             "Monthly":"Monthly"
+          }
+       },
+       {
+          "name":"premium_payment_term",
+          "label":"Premium Payment Term",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"smoking_status",
+          "label":"Smoking Status",
+          "field_type":"boolean",
+          "options":[
+             
+          ]
+       },
+       {
+          "name":"sum_assured",
+          "label":"Sum Assured",
+          "field_type":"numeric",
+          "options":[
+             
+          ]
+       }
+    ]
+ }
